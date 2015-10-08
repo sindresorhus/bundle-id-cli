@@ -1,0 +1,49 @@
+{
+  "name": "bundle-id-cli",
+  "version": "0.0.0",
+  "description": "Get bundle identifier from a bundle name (OS X): Safari → com.apple.Safari",
+  "license": "MIT",
+  "repository": "sindresorhus/bundle-id-cli",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": {
+    "bundle-id": "cli.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "plist",
+    "applescript",
+    "bundle",
+    "bundleid",
+    "bundlename",
+    "id",
+    "identifier",
+    "CFBundleName",
+    "CFBundleIdentifier",
+    "uti"
+  ],
+  "dependencies": {
+    "bundle-id": "^2.0.0",
+    "meow": "^3.4.2"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
