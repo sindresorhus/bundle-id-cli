@@ -1,6 +1,6 @@
 {
   "name": "bundle-id-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get bundle identifier from a bundle name (OS X): Safari → com.apple.Safari",
   "license": "MIT",
   "repository": "sindresorhus/bundle-id-cli",
