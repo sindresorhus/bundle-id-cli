@@ -13,7 +13,7 @@ const cli = meow(`
 `);
 
 if (cli.input.length === 0) {
-	console.error('Expected a bundle name');
+	console.error('Specify a bundle name');
 	process.exit(1);
 }
 

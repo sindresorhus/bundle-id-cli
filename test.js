@@ -1,12 +1,7 @@
-import childProcess from 'child_process';
+import execa from 'execa';
 import test from 'ava';
 
-test.cb(t => {
-	childProcess.execFile('./cli.js', ['Safari'], {
-		cwd: __dirname
-	}, (err, stdout) => {
-		t.ifError(err);
-		t.is(stdout.trim(), 'com.apple.Safari');
-		t.end();
-	});
+test(async t => {
+	const {stdout} = await execa('./cli.js', ['Safari'], {cwd: __dirname});
+	t.is(stdout, 'com.apple.Safari');
 });
