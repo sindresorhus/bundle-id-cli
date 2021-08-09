@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const bundleId = require('bundle-id');
+import process from 'node:process';
+import meow from 'meow';
+import {bundleIdSync} from 'bundle-id';
 
 const cli = meow(`
 	Usage
@@ -10,11 +10,13 @@ const cli = meow(`
 	Example
 	  $ bundle-id Safari
 	  com.apple.Safari
-`);
+`, {
+	importMeta: import.meta,
+});
 
 if (cli.input.length === 0) {
 	console.error('Specify a bundle name');
 	process.exit(1);
 }
 
-bundleId(cli.input[0]).then(console.log);
+console.log(bundleIdSync(cli.input[0]));
